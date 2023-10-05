@@ -13,7 +13,7 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
 
     const necessaryData = jsonData.map(item => `${item.exchangedate}:${item.rate}`);
 
-    const outputData = JSON.stringify(necessaryData, null, 2);
+    const outputData = necessaryData.join('\n');
 
     const outputFile = 'output.txt';
 
